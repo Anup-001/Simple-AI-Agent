@@ -44,8 +44,7 @@ def weather(location: str) -> str:
 @tool
 def currency_converter(amount: float, from_currency: str, to_currency: str) -> str:
     """Converts currency from one type to another (requires an external API)."""
-    # Example logic (you'd call an API here to get the actual conversion rate)
-    conversion_rate = 1.2  # Example fixed rate for conversion
+    conversion_rate = 1.2 
     converted_amount = amount * conversion_rate
     return f"{amount} {from_currency} is equal to {converted_amount:.2f} {to_currency}."
 
@@ -70,7 +69,7 @@ def main():
                 try:
                     num1 = float(parts[1])
                     num2 = float(parts[3])
-                    operation = parts[0].lower()  # 'add', 'subtract', 'multiply', 'divide'
+                    operation = parts[0].lower()
                     print("\nAssistant: ", end="")
                     response = calculator(num1, num2, operation)
                     print(response)
